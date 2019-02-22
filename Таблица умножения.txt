@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+
+	int a, b = 1, n = 10;
+	cout << "“аблицу умножени€ какого числа вывести? >> ";
+	cin >> a;
+	if (a > 0 && a < 11)
+	{
+		while (n > 0)
+		{
+			cout << a << " * " << b << " = " << a * b << endl;
+			b = b + 1;
+			n = n - 1;
+		}
+	}
+
+	system("pause");
+}

@@ -1,0 +1,48 @@
+
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+	srand(time(NULL));
+
+	int  score = 0, answ1, answ2, answ3, n = 0;
+
+	for (int i = 0; i != 3;)
+	{
+		cout << "1. Высота Останкинской башни?  \n--> 460m  \n--> 500m  \n--> 540m  \nТвой ответ(только число) --> ";
+		cin >> answ1;
+		
+		if (answ1 == 540)
+		{
+			i++;
+		}
+		cout << "\n2. 3 в 7 степени?  \n--> 2187  \n--> 2367  \n--> 2634  \nТвой ответ --> ";
+		cin >> answ2;
+		
+		if (answ2 == 2187)
+		{
+			i++;
+		}
+		cout << "\n3. Когда вышел iPhone 3g?  \n--> 2007  \n--> 2008  \n--> 2006  \nТвой ответ --> ";
+		cin >> answ3;
+		
+		if (answ3 == 2008)
+		{
+			i++;
+		}
+		
+		if (i != 3)
+		{
+			i = 0;
+			system("cls");
+		}
+	}
+	cout << "\nТы прошел тест, неужели\n" << endl;
+
+
+	system("pause");
+}

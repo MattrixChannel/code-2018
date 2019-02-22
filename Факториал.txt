@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int fact(int num)
+{
+	int rez = 1, mnoj = 1;
+	for (; num > 0; num--)
+	{
+		rez *= mnoj;
+		mnoj++;
+	}
+	return rez;
+}
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	cout << "!10 = " << fact(10) << endl;
+	cout << "!4 = " << fact(4) << endl;
+	cout << "!43 = " << fact(7) << endl;
+
+	system("pause");
+}

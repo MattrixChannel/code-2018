@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+
+	int num = 1;
+
+	cout << "¬ведите числа, не €вл€ющиес€ степенью 2:" << endl;
+
+	while (true)
+	{
+		cin >> num;
+		if (num == 1)
+		{
+			break;
+		}
+		while (num > 2 && num % 2 == 0)
+		{
+			num = num/2;
+		}
+		if (num % 2 == 0 && num == 2)
+		{
+			break;
+		}
+
+	}
+	
+
+	system("pause");
+}

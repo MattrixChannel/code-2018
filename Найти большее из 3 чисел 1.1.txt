@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "ru");
+
+	float x, y, z;
+
+	cout << "\n¬ведите 3 разных числа"<<endl;
+	cout << "\n ¬ведите 1-ое число >> ";
+	cin>>x;
+
+	cout << " ¬ведите 2-ое число >> ";
+	cin >> y;
+
+	cout << " ¬ведите 3-ье число >> ";
+	cin >> z;
+
+	if (x != y && x != z && z != y)
+	{
+
+		if (x > z && x > y)
+		{
+			cout << "  " << x << " - самое большое число" << endl;
+		}
+
+		if (y > z && y > x)
+		{
+			cout << "  " << y << " - самое большое число" << endl;
+		}
+
+		if (z > x && z > y)
+		{
+			cout << "  " << z << " - самое большое число" << endl;
+		}
+	}
+	else
+	{
+		cout << "\nError"<<endl;
+	}
+
+	cout << "\n";
+	
+	system("pause");
+}

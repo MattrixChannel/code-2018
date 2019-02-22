@@ -1,0 +1,73 @@
+Простейшие операции с массивами
+5. В одномерном массиве из N вещественных элементов, вычислить:
+• сумму отрицательных элементов массива;
+• произведение элементов массива, расположенных между
+максимальным и минимальным элементами.
+Упорядочить элементы массива по возрастанию.
+
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+void main()
+{
+	srand(time(NULL));
+	setlocale(LC_ALL, "Rus");
+	const int N = 10; // Задаем переменные
+	float Mas[N], otr = 0, proiz = 1;
+	int maks = 0, min = 0;
+
+	cout << "Массив:" << endl; // Выводим полученный массив
+
+	for (int i = 0; i < N; i++)
+	{
+		Mas[i] = (rand() % 101 - 50) / 10.0;
+		cout << " " << Mas[i];
+	}
+	cout << "\n\nСумма отриц чисел >> "; // Выводим сумму отрицательных чисел массива
+
+	for (int i = 0; i < N; i++)
+	{
+		if (Mas[i] < 0)
+			otr += Mas[i];
+	}
+	cout << otr << endl << endl;
+
+	cout << "Произведение между макс и мин >> "; // Выводим произведение между макс и мин эл массива
+
+	for (int i = 0; i < N - 1; i++) // Нахождение максимального и минимального эл
+	{
+		if (Mas[min] > Mas[i + 1])
+			min = i + 1;
+		if (Mas[maks] < Mas[i + 1])
+			maks = i + 1;
+	}
+
+	if (maks < min)
+		swap(maks, min);
+
+	for (; maks >= min; maks--) // Вывод произведения
+	{
+		proiz *= Mas[maks];
+	}
+	cout << proiz << endl << endl;
+
+	cout << "Массив по возрастанию:" << endl; // Выводим отсоритрованный массив
+
+	for (int o = 0; o < N; o++) // Сортировка массива
+	{
+		for (int i = 0; i < N - 1; i++)
+		{
+			if (Mas[i] > Mas[i + 1])
+				swap(Mas[i], Mas[i + 1]);
+		}
+	}
+
+	for (int i = 0; i < N; i++) // Вывод массива
+	{
+		cout << " " << Mas[i];
+	}
+	cout << endl << endl;
+	system("pause");
+}

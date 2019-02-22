@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+
+	cout << "\n\tНочевала тучка золотая" << endl;
+	cout << "\tНа груди утеса - великана;" << endl;
+	cout << "\tУтром в путь она умчалась рано," << endl;
+	cout << "\tПо лазури весело играя;\n" << endl;
+	cout << "\tНо остался влажный след в морщине" << endl;
+	cout << "\tСтарого утеса.Одиноко" << endl;
+	cout << "\tОн стоит, задумался глубоко," << endl;
+	cout << "\tИ тихонько плачет он в пустыне." << "\n\n"<<endl;
+
+	system("pause");
+}

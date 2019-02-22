@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "ru");
+
+	char answ = 'Y';
+	float x = 1, y = 1;
+
+	while (answ == 'Y')
+	{
+		cout << "Введите 2 дробных числа >> ";
+		cin >> x >> y;
+		cout << " Ответ: " << x + y << endl<<"Хотите повторить операцию?(Y/N) >> ";
+		cin >> answ;
+		system("cls");
+	}
+	
+	system("pause");
+}

@@ -1,0 +1,62 @@
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+void end()
+{
+	cout << "\nERROR\n";
+	system("pause");
+	exit(0);
+}
+
+void main()
+{
+	srand(time(NULL));
+	setlocale(LC_ALL, "Rus");
+
+	const int N = 5, M = 6;
+	int Mas[N][M];
+	char answ = 'q', answ1 = 'b';
+	while (answ1 == 'b')
+	{
+		system("cls");
+		for (int i = 0; i < N; i++)
+		{
+			for (int j = 0; j < M; j++)
+			{
+				Mas[i][j] = rand() % 6;
+				cout << Mas[i][j] << " ";
+			}
+			cout << endl;
+		}
+		cout << " Сдвинуть массив вправо - r, вниз - d" << endl;
+		cin >> answ;
+		cout << endl;
+		if (answ != 'd' && answ != 'r')
+			end();
+		if (answ == 'r')
+			for (int i = N - 1; i >= 0; i--)
+				for (int j = M - 1; j > 0; j--)
+					swap(Mas[i][j], Mas[i][j - 1]);
+
+		if (answ == 'd')
+			for (int i = N - 1; i > 0; i--)
+				for (int j = M - 1; j >= 0; j--)
+				{
+					swap(Mas[i - 1][j], Mas[i][j]);
+				}
+
+		for (int i = 0; i < N; i++)
+		{
+			for (int j = 0; j < M; j++)
+			{
+				cout << Mas[i][j] << " ";
+			}
+			cout << endl;
+		}
+		cout << " Начать заново - b, закончить работу - s >> ";
+		cin >> answ1;
+	}
+}
+

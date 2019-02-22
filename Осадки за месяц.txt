@@ -1,0 +1,39 @@
+При 0 градусов идет дождь
+
+
+#include <iostream>
+#include<ctime>
+
+using namespace std;
+
+void end()
+{
+	cout << "\nERROR\n";
+	system("pause");
+	exit(0);
+}
+
+void main()
+{
+	srand(time(NULL));
+	setlocale(LC_ALL, "Rus");
+
+	const int N = 31;
+	int Temp[N], Osad[N], sneg = 0, doj = 0;
+
+	for (int i = 0; i < N; i++)
+	{
+		Temp[i] = rand() % 60 - 30;
+		Osad[i] = rand() % 100;
+		cout << i + 1 << " день\n  Температура >> " << Temp[i] << "\n  Осадки >> " << Osad[i] << endl<< endl;
+		if (Temp[i] > -1)
+			doj += Osad[i];
+		else
+			sneg += Osad[i];
+	}
+	cout << "\nСнег >> " << sneg << endl;
+	cout << "Дождь >> " << doj << endl << endl;
+
+
+	system("pause");
+}

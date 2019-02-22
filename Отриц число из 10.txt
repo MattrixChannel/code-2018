@@ -1,0 +1,36 @@
+
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+
+	bool result = 0;
+	int number;
+
+	cout << "Введите 10 чисел" << endl;
+
+	for (int count = 1; count < 11; count++)
+	{
+		cin >> number;
+		cout << endl;
+		if (number < 0)
+		{
+			result = result + 1;
+		}
+		number = 0;
+	}
+
+	if (result)
+	{
+		cout << " Среди этих чисел есть отрицательное число" << endl;
+	}
+	else
+	{
+		cout << " Все числа положительные" << endl;
+	}
+
+	system("pause");
+}

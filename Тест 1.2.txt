@@ -1,0 +1,72 @@
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+
+	int  score = 0;
+	char answ1, answ2, answ3;
+
+	for (char answ = 'Y'; answ =='Y';)
+	{
+		system("cls");
+		cout << "1. Можно ли прожить без мемов 24 часа?   \nТвой ответ(Y/N) --> ";
+		cin >> answ1;
+
+	    if (answ1 == 'N')
+		{
+			score++;
+		}
+		cout << "\n2. Могут ли верблюды провести 35 дней без воды?  \nТвой ответ(Y/N) --> ";
+		cin >> answ2;
+
+		if (answ2 == 'N')
+		{
+			score++;
+		}
+		cout << "\n3. Что пропущено? Press _ to pay respect  \nТвой ответ --> ";
+		cin >> answ3;
+
+		if (answ3 == 'F')
+		{
+			score++;
+		}
+
+		switch (score)
+		{
+		case 0:
+		{
+
+			cout << "\nПовезет в другой раз, 0 баллов" << endl;
+			break;
+		}
+		case 1:
+		{
+
+			cout << "\nМожно было лучше, 1 балл" << endl;
+			break;
+		}
+		case 2:
+		{
+
+			cout << "\nПриемлимо, 2 балла" << endl;
+			break;
+		}
+		case 3:
+		{
+
+			cout << "\nОтлично, 3 балла" << endl;
+			break;
+		}
+		}
+		cout << "Пройти тест еще раз?(Y/N) >> ";
+		cin >> answ;
+		score = 0;
+	}
+
+
+	system("pause");
+}

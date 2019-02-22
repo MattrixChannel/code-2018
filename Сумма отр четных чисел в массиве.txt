@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	int Mas[8];
+	int sum = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		cin >> Mas[i];
+		if (Mas[i] < 0 && Mas[i] % 2 == 0)
+		{
+			sum = sum + Mas[i];
+		}
+	}
+	
+	for (int i = 0; i < 8; i++)
+	{
+		cout << Mas[i]<<" ";
+	}
+	cout << endl << sum << endl;
+
+	system("pause");
+}

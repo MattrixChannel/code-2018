@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+
+	int a, b;
+
+	cout << "¬ведите a >> ";
+	cin >> a;
+	cout << "¬ведите b >> ";
+	cin >> b;
+
+	a = a + b;
+	b = a - b;
+	a = a - b;
+
+	cout << "a = " << a << "\nb = " << b << endl;
+	
+	system("pause");
+}
